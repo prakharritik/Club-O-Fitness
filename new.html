@@ -1,0 +1,285 @@
+<html>
+	
+<head>
+    
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Club'o'fitness</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
+
+		<style>
+			.carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+		</style>
+
+
+
+</head>
+
+
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+	
+
+<nav class="bg-gray-900" style="background-color: #006161">
+        <div class="container mx-auto px-6 py-3 md:flex">
+            <div class="flex justify-between items-center">
+                <img src="telllgirl.jpg" height="80px" width="80px">
+                
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div class="w-full md:flex md:items-center md:justify-between" style="color: #ededed">
+                <div class="flex flex-col -mx-4 px-6 py-6 md:flex-row md:mx-0 md:py-0">
+                    <a href="#" class="py-4 px-5 text-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-900 hover:text-gray-100 md:mx-2" style= "color: #ededed;border-bottom: 4px solid #EFECEC; font-family: Georgia, serif; font-size: 20px"><b>Home</b></a>
+                    <a href="explore.html" class="py-4 px-5 text-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-900 hover:text-gray-100 md:mx-2" style="color: #ededed; font-family: Georgia, serif; font-size: 20px"><b>Explore</b></a>
+                    <a href="#" class="py-4 px-5 text-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-900 hover:text-gray-100 md:mx-2" style= "color: #ededed; font-family: Georgia, serif; font-size: 20px"><b>Trainig</b></a>
+                    
+                    <a href="login.html" class="py-4 px-5 text-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-900 hover:text-gray-100 md:mx-2" style= "color: #ededed; font-family: Georgia, serif; font-size: 20px"><b>Badges</b></a>
+                    <a href="login.html" class="py-4 px-5 text-gray-700 dark:text-gray-200 rounded text-sm font-medium hover:bg-gray-900 hover:text-gray-100 md:mx-2" style= "color: #ededed; font-family: Georgia, serif; font-size: 20px"><b>Login</b></a>
+                </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </nav>
+<div class="carousel relative shadow-2xl bg-white">
+	<div class="carousel-inner relative overflow-hidden w-full">
+	  <!--Slide 1-->
+		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img src="fit3.jpg" alt="" style="width: 100%; height: 100% ">
+			<div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div>
+		</div>
+		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+		
+		<!--Slide 2-->
+		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img src="fittt2.jpg" alt="" style="width: 100%; height: 100% ">
+			<div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div>
+		</div>
+		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+		
+		<!--Slide 3-->
+		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img src="fitt1.jpg" alt="" style="width: 100%; height: 100% ">
+			<div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+		</div>
+		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+		</ol>
+		
+	</div>
+</div>
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-20 mx-auto">
+    <div class="flex flex-col">
+      <h1 style="text-align: center;font-size: 60px">Features</h1>
+      
+    </div>
+    <br>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="fit20.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="fit6.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="fit9.jpg">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    <section class="bg-gray-100 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">
+        <div class="bg-white dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
+            <div class="lg:w-1/2">
+                <img src="fit7.jpg">
+            </div>
+
+            <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Earn Badges</h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-400">Having trouble finding the motivation to make it to your workouts? We could all use a little encouragement and reminder of our success sometimes. To help you out, we added badges to our app. With badges, you'll get personalized reminders of our fitness milestones to help keep you motivated and stay on top of your goals.</p>
+                
+                <div class="mt-8">
+                    <a href="#" class="px-5 py-2 font-semibold text-gray-100 transition-colors duration-200 transform bg-gray-900 rounded-md hover:bg-gray-700">Start Earning</a>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+   <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Quick Reads</h1>
+        
+      </div>
+      <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">The blogs listed here provide information from real and quality sources, meaning people who are truly engaged in the health and fitness industry. You will not be charged for the information you need. We understand that paying a hefty sum to read about fitness tips or being forced to buy fancy equipment also prevents you from sticking to your fitness goals.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="xl:w-2/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-70 rounded w-full object-cover object-center mb-6" src="fit11.jpg" alt="content">
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chichen Itza</h2>
+          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        </div>
+      </div>
+      <div class="xl:w-2/4 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-70 rounded w-full object-cover object-center mb-6" src="fit13.jpeg" alt="content">
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Colosseum Roma</h2>
+          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-20 mx-auto">
+    <div class="flex flex-col">
+      <h1 style="text-align: center;font-size: 60px">Why To Join Us</h1>
+      
+    </div>
+    <br>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="coach.png" style="width: 60%">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">We Coach</h2>
+        
+          
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="care.png" style="width: 60%">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">We Care</h2>
+        
+          
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="connect.png" style="width: 60%">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">We Connect</h2>
+        
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+
+
+</body>
+
+
+
+</html>
